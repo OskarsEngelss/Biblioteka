@@ -18,19 +18,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (strlen($_POST["author"]) > 255) {
     $errors["author"] = "Author can't be longer than 255 characters!";
   }
-  if (trim($_POST["release-date"]) == "") {
-    $errors["release-date"] = "Release date can't be empty!";
+  if (trim($_POST["released"]) == "") {
+    $errors["released"] = "Release date can't be empty!";
   }
   if ($_POST["availability"] < 0) {
     $errors["availability"] = "Availability can't be less than less than 0 characters!";
   }
   
   if (empty($errors)) {
-    $query = "INSERT INTO books (title, author, release_date, availability) VALUES (:title, :author, :release_date, :availability);";
+    $query = "INSERT INTO books (title, author, released, availability) VALUES (:title, :author, :released, :availability);";
     $params = [
       ":title" => $_POST["title"],
       ":author" => $_POST["author"],
-      ":release_date" => $_POST["release-date"],
+      ":released" => $_POST["released"],
       ":availability" => $_POST["availability"],
     ];
 

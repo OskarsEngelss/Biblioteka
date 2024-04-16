@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "Database.php";
 $config = require("config.php");
 $db = new Database($config);
@@ -11,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ":password" => trim($_POST["password"])
         ];
         $user = $db->execute($query, $params)->fetch();    
-
+        $_SESSION["user_id"] = $user["id"];
     }
-    header("Location: /user-profile?id=" . $user["id"]);
+    header("Location: /user-profile");
     die();
 }
 ?>

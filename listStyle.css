@@ -6,14 +6,16 @@
 }
 
 body {
+    width: 100vw;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    width: 100vw;
-    height: 40vh;
-    padding-top: 60px;
+    padding-top: 90px;
+
+    background-color: rgb(243, 221, 225);
 }
 
 header {
@@ -26,24 +28,132 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 50px;
+    height: 80px;
     backdrop-filter: blur(4px);
-    background-color: rgba(200, 200, 200, 0.5);
+    background-color: rgba(223, 223, 223, 0.5);
     box-shadow: 0px 5px 10px rgba(10, 10, 10, 0.3);
     border-bottom: 1px solid #ccc;
 }
 
-section {
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 1.7em;
+}
+
+.fruits-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
+    padding: 20px 40px 20px 40px;
+
+    background-color: rgba(255, 188, 200, 0.938);
+    border: black 3px solid;
+    border-radius: 35px;
 }
 
-h1 {
-    font-size: 35px;
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0;
 }
 
-h2 {
-    font-size: 20px;
+.fruit {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+form {
+    margin: 10px 0 0 0;
+}
+
+button {
+    width: 160px;
+    height: 25px;
+    font-weight: bolder;
+}
+
+label {
+    color: black;
+    font-size: 1.5em;
+}
+
+.add-edit-button {
+    border-radius: 30px;
+
+    background: rgb(255, 98, 98);
+    color: black;
+    font-size: 1.35em;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.invalid-data {
+    color: red;
+    font-size: 0.8em;
+}
+  
+.remove-form {
+    display: inline-block;
+}
+  
+.remove-button {
+    width: 65px;
+    background-color: rgb(255, 176, 176);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 10px;
+
+    background-color: rgba(255, 188, 200, 0.938);
+    border: black 3px solid;
+    border-radius: 35px;
+}
+.back-circle {
+    background-color: rgb(255, 98, 98);
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 0;
+
+    border: black 3px solid;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.back-circle:hover {
+    transform: scale(1.1);
+}
+.back-button {
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+
+    background: none;
+    color: black;
+    font-size: 1.35em;
+    border: none;
+	cursor: pointer;
+	outline: inherit;
 }

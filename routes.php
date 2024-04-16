@@ -5,6 +5,7 @@ return [
     "/book-delete" => "controllers/books/delete.php",
     "/user-profile" => "controllers/users/index.php",
     "/user-login" => "controllers/users/login.php",
-    "/user-take" => "controllers/users/take.php"
+    "/user-take" => "controllers/users/take.php",
+    "/logout" => "controllers/users/logout.php"
 ]
 ?>

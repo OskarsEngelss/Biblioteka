@@ -5,7 +5,7 @@
     <h2><?=$book["title"]?></h2>
     <ul>
         <li>Author: <?=htmlspecialchars($book["author"])?></li>
-        <li>Release Date: <?=htmlspecialchars($book["release_date"])?></li>
+        <li>Release Date: <?=htmlspecialchars($book["released"])?></li>
         <li>Availability: <?=htmlspecialchars($book["availability"])?></li>
         <form method="POST" action="/book-delete" class="delete-form">
             <input type="hidden" name="id" value="<?= $book["id"] ?>" />
@@ -33,5 +33,11 @@
         <?php } ?>
     <?php } ?>
 </section>
+
+<div class="button-holder">
+    <form class="back-circle" action="/user-profile">
+        <button class="back-button">Back</button>
+    </form>
+</div>
 
 <?php require "views/components/footer.php" ?>

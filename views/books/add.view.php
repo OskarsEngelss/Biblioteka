@@ -1,7 +1,7 @@
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
 
-<h1>Add a post</h1>
+<h1>Add a book:</h1>
 
 <form method="POST">
     <lable>
@@ -20,9 +20,9 @@
     </lable>
     <lable>
         Release Date:
-        <input type="date" name='release-date' value="<?=($_POST["release-date"] ?? "")?>"/>
-        <?php if(isset($errors["release-date"])) { ?> 
-            <p class="invalid-data"><?= $errors["release-date"] ?></p>
+        <input type="date" name='released' value="<?=($_POST["released"] ?? "")?>"/>
+        <?php if(isset($errors["released"])) { ?> 
+            <p class="invalid-data"><?= $errors["released"] ?></p>
         <?php } ?>
     </lable>
     <lable>
@@ -35,5 +35,11 @@
     
     <button>Create</button>
 </form>
+
+<div class="button-holder">
+    <form class="back-circle" action="/user-profile">
+        <button class="back-button">Back</button>
+    </form>
+</div>
 
 <?php require "views/components/footer.php" ?>
