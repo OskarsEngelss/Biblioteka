@@ -1,11 +1,14 @@
 <?php 
 return [
     "/" => "controllers/books/index.php",
+    "/register" => "controllers/auth/register.php",
+    "/login" => "controllers/auth/login.php",
+    "/logout" => "controllers/auth/logout.php",
+    "/profile" => "controllers/users/index.php",
     "/book-add" => "controllers/books/add.php",
+    "/book-edit" => "controllers/books/edit.php",
     "/book-delete" => "controllers/books/delete.php",
-    "/user-profile" => "controllers/users/index.php",
-    "/user-login" => "controllers/users/login.php",
-    "/user-take" => "controllers/users/take.php",
-    "/logout" => "controllers/users/logout.php"
+    "/borrow" => "controllers/users/borrow.php",
+    "/return" => "controllers/users/return.php"
 ]
 ?>

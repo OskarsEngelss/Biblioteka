@@ -19,9 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     die();
 }
 
-$books = $db
-          ->execute($query, $params)
-          ->fetchAll();
+$books = $db->execute($query, $params)->fetchAll();
 
 $title = "Delete Book";
 require "views/books/delete.view.php";

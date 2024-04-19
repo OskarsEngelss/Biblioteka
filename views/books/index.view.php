@@ -2,7 +2,7 @@
 <?php require "views/components/navbar.php" ?>
 
 <?php function bookList($book) {?>
-    <a href="/user-take?id=<?= $book["id"] ?>">
+    <a href="/borrow?id=<?= $book["id"] ?>">
         <h3><?=$book["title"]?></h3>
         <ul>
             <li>Author: <?=htmlspecialchars($book["author"])?></li>
@@ -10,6 +10,11 @@
             <li>Availability: <?=htmlspecialchars($book["availability"])?></li>
         </ul>
     </a>
+    <?php if (isset($_POST["edit"])) { ?>
+        <form method="POST" action="/book-edit?id=<?= $book["id"] ?>" class="delete-form">
+            <button class="delete-button">Edit</button>
+        </form>
+    <?php } ?>
 <?php } ?>
 
 <section>
@@ -33,7 +38,7 @@
 </section>
 
 <div class="button-holder">
-    <form class="back-circle" action="/user-profile">
+    <form class="back-circle" action="/profile">
         <button class="back-button">Profile</button>
     </form>
 </div>

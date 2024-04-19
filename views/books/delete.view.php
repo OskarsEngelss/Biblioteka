@@ -35,7 +35,7 @@
 </section>
 
 <div class="button-holder">
-    <form class="back-circle" action="/user-profile">
+    <form class="back-circle" action="/profile">
         <button class="back-button">Back</button>
     </form>
 </div>
