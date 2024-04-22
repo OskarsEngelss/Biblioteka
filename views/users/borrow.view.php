@@ -5,6 +5,13 @@
 
 <form method="POST" action="/borrow?id=<?= $book["id"] ?>">
     <input type="hidden" name="id" value="<?= $book["id"] ?>" />
+    <lable>
+        Borrow Time:
+        <input type="datetime-local" name="reserveTime" value="<?=($_POST["reserveTime"] ?? "")?>" />
+        <?php if(isset($errors["reserveTime"])) { ?> 
+            <p class="invalid-data"><?= $errors["reserveTime"] ?></p>
+        <?php } ?>
+    </lable>
     <button>Borrow</button>
 </form>
 

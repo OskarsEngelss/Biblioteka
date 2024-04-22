@@ -18,10 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($errors)) {
         $_SESSION["user"] = true;
+        $_SESSION["username"] = $user["username"];
         $_SESSION["email"] = $_POST["email"];
         $_SESSION["user_id"] = $user["id"];
+        $_SESSION["is_admin"] = $user["is_admin"];
         
-        header("Location: /profile");
+        header("Location: /");
         die();
     }
 }

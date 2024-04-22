@@ -4,6 +4,13 @@
 <div class="login-div">
     <form class="login-form" method="POST">
         <label class="login-margin">
+            Username:
+            <input type="text" name='username' value="<?=($_POST["username"] ?? "")?>"/>
+            <?php if(isset($errors["username"])) { ?> 
+                <p class="invalid-data"><?= $errors["username"] ?></p>
+            <?php } ?>
+        </label>
+        <label class="login-margin">
             Email:
             <input type="email" name='email' value="<?=($_POST["email"] ?? "")?>"/>
             <?php if(isset($errors["email"])) { ?> 
@@ -13,7 +20,7 @@
         <label class="login-margin">
             Password:
             <input type="password" name='password' value="<?=($_POST["password"] ?? "")?>"/>
-            <span class="explanation">(jābūt 8 rakstzīmēm, 1 burtam, 1 lielam, 1 mazam un 1 īpašam simbolam.)</span>
+            <span class="explanation">(8 characters, 1 letter, 1 uppercase, 1 lowercase un 1 special symbol.)</span>
             <?php if(isset($errors["password"])) { ?> 
                 <p class="invalid-data"><?= $errors["password"] ?></p>
             <?php } ?>

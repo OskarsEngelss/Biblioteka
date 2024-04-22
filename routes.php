@@ -4,7 +4,6 @@ return [
     "/register" => "controllers/auth/register.php",
     "/login" => "controllers/auth/login.php",
     "/logout" => "controllers/auth/logout.php",
-    "/profile" => "controllers/users/index.php",
     "/book-add" => "controllers/books/add.php",
     "/book-edit" => "controllers/books/edit.php",
     "/book-delete" => "controllers/books/delete.php",

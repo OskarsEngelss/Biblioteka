@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ];
 
     $db->execute($query, $params); 
-    header("Location: /profile");
+    header("Location: /");
     die();
 }
 ?>

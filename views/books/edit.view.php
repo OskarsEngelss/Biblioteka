@@ -38,7 +38,7 @@
 </form>
 
 <div class="button-holder">
-    <form class="back-circle" action="/profile">
+    <form class="back-circle" action="/">
         <button class="back-button">Back</button>
     </form>
 </div>
